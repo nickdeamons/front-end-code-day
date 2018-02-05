@@ -1,0 +1,55 @@
+.u-relative {
+    position: relative;
+}
+
+.u-block {
+    display: block;
+}
+
+.u-text-center {
+    text-align: center;
+}
+
+.u-margin {
+   
+    &--center {
+        margin: 0px auto;
+    }
+    &--all {
+        margin: $mobile-gutter;
+        @media screen and (min-width: $width-md) {
+            margin: $gutter;
+        }
+    }
+    &--bottom {
+        margin-bottom: $mobile-gutter;
+        @media screen and (min-width:$width-md) {
+            margin-bottom: $gutter;
+        }
+        &\@mobile {
+            @media screen and (max-width:$width-md) {
+                margin-bottom: $mobile-gutter;
+            }
+        }
+    }
+}
+
+.u-padding {
+    &--all {
+        padding: $mobile-gutter;
+        @media screen and (min-width: $width-md) {
+            padding: $gutter;
+        }
+    }
+    &--all--double {
+        padding: $gutter;
+        @media screen and (min-width: $width-md) {
+            padding: $gutter * 2;
+        }
+    }
+}
+
+.u-img--100 {
+    width:100%;
+    height: auto;
+}

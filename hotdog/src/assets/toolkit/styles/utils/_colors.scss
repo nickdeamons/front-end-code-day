@@ -1,0 +1,29 @@
+.color {
+    &--blue {
+        color: $blue;
+    }
+    &--gray-darkest {
+        color: $gray-darkest;
+    }
+    &--gray-lightest {
+        color: $gray-lightest;
+    }
+    &--white {
+        color:white;
+    }
+}
+
+.bgcolor {
+    &--white {
+        background-color:white;
+    }
+    &--blue {
+        background-color: $blue;
+    }
+    &--gray-lightest {
+        background-color: $gray-lightest;
+    }
+    &--gray-darkest {
+        background-color: $gray-darkest;
+    }
+}

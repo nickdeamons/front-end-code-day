@@ -1,0 +1,73 @@
+.h {
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    &-sm {
+        font-size: 16px;
+        @media screen and (min-width: $width-md) {
+            font-size:22px;
+        }
+    }
+    &-md {
+        font-size: 18px;
+        @media screen and (min-width: $width-md) {
+            font-size:24px;
+        }
+    }
+    &-lg {
+        font-size: 24px;
+        @media screen and (min-width: $width-md) {
+            font-size:32px;
+        }
+    }
+    &-xl {
+        font-size:26px;
+        @media screen and (min-width: $width-md) {
+            font-size: 32px;
+        }
+        @media screen and (min-width: $width-lg) {
+            font-size:56px;
+        }
+    }
+    &--promotional {
+        position: relative;
+        text-align: center;
+        span {
+            display: inline-block;
+            padding: 0 15px;
+            margin: 0 auto;
+            background-color: white;
+            z-index: 1;
+        }
+        &:before,
+        &:after {
+            position: absolute;
+            top: 12px;
+            content: ' ';
+            height: 2px;
+            background-color: $blue;
+            z-index: -1;
+        }
+        &:after {
+            right: 0;
+            width: 100%;
+        }
+        @media screen and (min-width: $width-md) {
+            text-align: left;
+            span {
+                padding: 0;
+                margin:0;
+            }
+            &:before {
+                left: -50px;
+                top: 18px;
+                width: 30px;
+            }
+            &:after {
+                content:none;
+            }
+        }
+    }
+}

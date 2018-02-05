@@ -1,0 +1,18 @@
+.promotional {
+    display: flex;
+    flex-direction: row;    
+    height:100%;
+    @media screen and (min-width: $width-md) {
+        &__content {
+            padding:0 $gutter;
+        }
+    }
+    @media screen and (min-width: $width-lg) {
+        &__content {
+            width: 60%;
+            margin-left: 20%;
+            padding:0;
+        }
+        
+    }
+}

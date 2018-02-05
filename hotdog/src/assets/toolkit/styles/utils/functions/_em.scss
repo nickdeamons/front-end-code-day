@@ -1,0 +1,56 @@
+/**
+ * Font Size calculation : ems
+ * Returns an em value according to the target.
+ * $target: font-size to return
+ * $context: By default it uses the default font-size. You can also pass it a context to avoid problems of compound font sizes.
+ * $unitless: If you want to remove the em from the result.
+ * Examples
+ * Example 1: em(20)
+ * return: 1.25em depending on a root font-size of 16px
+ * Example 2: em(20, 24)
+ * return: 0.8333333em depending on a context font-size of 24px
+ * Example 3: em(20, $unitless: false)
+ * returns 0.8333333
+ *
+ * See CSS tricks article: https://css-tricks.com/snippets/sass/px-to-em-functions/
+ */
+
+ @function em($target, $context: $base-font-size, $unitless: false) {
+    @if $target == 0 { @return 0; }
+
+    @if(unitless($target)) {
+        $target: $target + 0px;
+    }
+
+    @if(unitless($context)) {
+        $context: $context + 0px;
+    }
+
+    //Determine whether we want line-height unitless or not
+    $result: $target / $context;
+    @if $unitless == true {
+        @return $result;
+    } @else {
+        @return $result + 0em;
+    }
+}
+
+@function rem($target, $context: $base-font-size, $unitless: false) {
+    @if $target == 0 { @return 0; }
+
+    @if(unitless($target)) {
+        $target: $target + 0px;
+    }
+
+    @if(unitless($context)) {
+        $context: $context + 0px;
+    }
+
+    //Determine whether we want line-height unitless or not
+    $result: $target / $context;
+    @if $unitless == true {
+        @return $result;
+    } @else {
+        @return $result + 0rem;
+    }
+}

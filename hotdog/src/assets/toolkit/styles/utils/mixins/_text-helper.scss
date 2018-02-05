@@ -1,0 +1,66 @@
+/**
+ * Text helpers
+ */
+
+// Crisp text
+@mixin crisp-text() {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+// Visually hides text
+@mixin hide-text($indent: 101%) {
+    text-indent: $indent;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// Truncates text with ellipsis
+@mixin truncate() {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// Multiline truncate
+@mixin truncate-multiline($max-height: 3.75em, $reset-mq: '') {
+    position: relative;
+    max-height: $max-height;
+    margin-right: -1em;
+    padding-right: 1em;
+    text-align: justify;
+    overflow: hidden;
+    transition: max-height 0.33s ease;
+
+    &:before, &:after {
+        position: absolute;
+        right: 0;
+    }
+
+    &:before {
+        bottom: 0.125em;
+        content: '...';
+    }
+
+    &:after {
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height: 1em;
+        margin-top: 0.2em;
+        background: $white;
+        content: '';
+    }
+
+    @if $reset-mq != '' {
+        @media #{$reset-mq} {
+            max-height: 10000px;
+            margin-right: 0;
+            padding-right: 0;
+
+            &:before, &:after {
+                display: none;
+            }
+        }
+    }
+}

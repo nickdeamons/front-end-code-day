@@ -1,0 +1,45 @@
+/**
+ * Base Styles
+ */
+
+ @viewport {
+    width: device-width;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    &,
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+html {
+    box-sizing: border-box;
+
+    /* IE Horizontal overflow fix */
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+body {
+    position: relative;
+    font-size: 100%;
+    font-family: 'Open Sans', 'Arial', sans-serif;
+    background-color: $gray-lightest;
+}
+
+
+
+body,
+input {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+}

@@ -1,0 +1,13 @@
+/**
+ * Map Getter
+ */
+
+// z-index
+@function z($index) {
+    @if not map-has-key($z-index, $index) {
+        @error 'No index found for `#{$index}` in $z-indexs map.';
+    } @else {
+        @return map-get($z-index, $index);
+    }
+    @error 'Unexpected error.';
+}

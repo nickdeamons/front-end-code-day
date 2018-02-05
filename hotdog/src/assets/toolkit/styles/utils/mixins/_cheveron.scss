@@ -1,0 +1,38 @@
+/**
+ * Chevron mixin
+ * @param  {[type]} $size:      12px          Size of the chevron.
+ * @param  {[type]} $stroke:    3px           Width of the stroke.
+ * @param  {[type]} $color:     currentColor  Color of the chevron.
+ * @param  {[type]} $direction: right         up, right, down, left
+ * @return {[type]}             Creates a chevron
+ */
+
+ @mixin chevron($size: 12px, $stroke: 3px, $color: currentColor, $direction: right) {
+    $rotation: 45deg;
+    $margin: 0;
+
+    @if $direction == up {
+        $rotation: -45deg;
+        $margin: 0 0 (-$size / 2) 0;
+    } @else if $direction == right {
+        $rotation: 45deg;
+        $margin: 0 0 0 (-$size / 2);
+    } @else if $direction == down {
+        $rotation: 135deg;
+        $margin: (-$size / 2) 0 0 0;
+    } @else if $direction == left {
+        $rotation: -135deg;
+        $margin: (-$stroke / 2) (-$size / 2) 0 0;
+    }
+
+    display: inline-block;
+    width: $size;
+    height: $size;
+    margin: $margin;
+    transform: rotate($rotation);
+    border-style: solid;
+    border-width: $stroke $stroke 0 0;
+    color: $color;
+    content: '';
+    vertical-align: middle;
+}

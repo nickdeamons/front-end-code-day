@@ -1,0 +1,52 @@
+
+<header class="header">
+    {{> grid-hero}}
+
+    {{> nav }}
+    {{> content-hero}}
+
+</header>
+<main class="main bgcolor--gray-darkest">
+    
+    <div class="layout--wrapper u-margin--center bgcolor--white">
+        <section class="layout-grid layout-grid@md layout-grid--2 layout-grid--2@md ">
+
+            <div class="u-padding--all">
+                {{> promotional content="Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum." title="Gormet All Beef Hotdogs" }}
+            </div>
+        
+            <div class="">
+                <img src="/assets/toolkit/images/hotdog_1.png" class="u-block u-img--100" />
+            </div>
+        
+        </section>
+
+
+        <section class="layout-grid layout-grid@md layout-grid--2 layout-grid--2--reverse layout-grid--2@md layout-grid--2--reverse@lg bgcolor--white">
+
+            <div class="u-padding--all">
+                    {{> promotional content="Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum." title="Vegan Hotdogs" }}
+                </div>
+            
+                <div class="pulled">
+                    <img src="/assets/toolkit/images/hotdog_2.png" class="u-block u-img--100" />
+                </div>
+
+        </section>
+
+        <section class="layout-grid layout-grid@md layout-grid--2 layout-grid--2@md bgcolor--white">
+
+                <div class="u-padding--all">
+                    {{> promotional content="Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum." title="Vegitarian Hotdogs" }}
+                </div>
+            
+                <div class="">
+                    <img src="/assets/toolkit/images/hotdog_3.png" class="u-block u-img--100" />
+                </div>
+            
+            </section>
+
+    </div>
+</main>
+
+{{> footer }}

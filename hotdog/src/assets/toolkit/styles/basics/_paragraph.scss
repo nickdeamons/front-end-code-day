@@ -1,0 +1,7 @@
+p {
+    color:#555559;
+    font-size:14px;
+    @media screen and (min-width:$width-lg){
+        font-size:16px;
+    }
+}

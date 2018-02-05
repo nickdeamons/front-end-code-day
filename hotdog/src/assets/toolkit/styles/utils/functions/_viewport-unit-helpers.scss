@@ -1,0 +1,25 @@
+/**
+ * Viewport width/height functions
+ */
+
+/**
+ * Convert pixels to viewport-width
+ * @param  px $px       Starting font-size
+ * @param  px $context  Design's base width
+ * @return vw value
+ */
+@function vw($px, $context: $base-layout-width) {
+    $result: ($px / $context) * 100;
+    @return $result + vw;
+}
+
+/**
+ * Convert pixels to viewport-height
+ * @param  px $px       Starting font-size
+ * @param  px $context  Design's base height
+ * @return vh value
+ */
+@function vh($px, $context: $base-layout-height) {
+    $result: ($px / $context) * 100;
+    @return $result + vh;
+}

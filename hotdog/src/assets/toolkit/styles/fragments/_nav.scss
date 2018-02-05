@@ -1,0 +1,38 @@
+.nav {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.25s;
+    .nav-open & {
+        max-height: 500px;
+    }
+    @media screen and (min-width: $width-lg) {
+        max-height: inherit;
+    }
+}
+
+.nav-items {
+    list-style-type: none;
+    padding: $mobile-gutter;
+    @media screen and (min-width: $width-lg) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: $gutter;
+        opacity: 1;
+    }
+    &__item {
+        a {
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            color: $gray-darkest;
+            transition: 0.25s all;
+            &:hover {
+                color: $blue;
+            }
+        }
+        @media screen and (min-width:$width-md) {
+            padding: 0 20px;
+        }
+    }
+}

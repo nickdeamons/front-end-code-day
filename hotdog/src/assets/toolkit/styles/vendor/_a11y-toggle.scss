@@ -1,0 +1,44 @@
+/**
+ * a11y-toggle JS styles
+ */
+
+[aria-hidden='true'],
+[data-a11y-toggle]:not([aria-controls]) {
+    display: none;
+}
+
+.a11y-toggle {
+    $self: &;
+
+    cursor: pointer;
+
+    &__icon {
+        display: inline-block;
+    }
+
+    &__icon-open {
+        display: none;
+    }
+
+    // Open state
+    &[aria-expanded='true'] {
+        #{$self}__icon-open {
+            display: inline-block;
+        }
+
+        #{$self}__icon-closed {
+            display: none;
+        }
+    }
+
+    &--lg {
+        position: relative;
+
+        #{$self}__icon {
+            position: absolute;
+            right: 0.25rem;
+            font-size: 1.5rem;
+            @include centerer('vertical');
+        }
+    }
+}

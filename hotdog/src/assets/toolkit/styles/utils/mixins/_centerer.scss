@@ -1,0 +1,18 @@
+// Centers absolutely positioned elements.
+//--------------------------------------------
+
+@mixin centerer($dir: both) {
+    position: absolute;
+
+    @if $dir == both {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } @else if $dir == vertical {
+        top: 50%;
+        transform: translateY(-50%);
+    } @else if $dir == horizontal {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

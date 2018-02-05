@@ -1,0 +1,9 @@
+colors:
+  primary:
+    Dark: "rgb(30, 30, 30)"
+    Light: "rgb(242, 242, 242)"
+    Gray: "rgba(205, 205, 205)"
+  secondary:
+    Red: "rgb(200, 80, 80)"
+    White: "rgb(255, 255, 255)"
+    Blue: "rgb(49, 102, 200)"

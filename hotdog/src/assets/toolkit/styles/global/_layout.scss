@@ -1,0 +1,76 @@
+.layout {
+    &--wrapper {
+        max-width: 1440px;
+        
+    }
+    &-grid {
+        &\@md {
+            @media screen and (min-width: $width-md) {
+                display: grid;
+            }
+        }
+        &\@lg {
+            @media screen and (min-width: $width-lg) {
+                display: grid;
+            }
+        }
+        &--2 {
+            &\@md {
+                @media screen and (min-width: $width-md) {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: "left right";
+                    grid-auto-flow: column;
+                }
+            }
+            &\@lg {
+                @media screen and (min-width: $width-lg) {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: "left right";
+                    grid-auto-flow: column;
+                }
+            }
+            >div:nth-child(2n+1) {
+                grid-area: left;
+            }
+            >div:nth-child(2n) {
+                grid-area: right;
+            }
+        }
+        &--2--reverse {
+            >div:nth-child(2n+1) {
+                grid-area: right;
+            }
+            >div:nth-child(2n) {
+                grid-area: left;
+            }
+        }
+    }
+    &-flex {
+        display: flex;
+        &--justify {
+            justify-content: space-between;
+        }
+        &--wrap {
+            flex-wrap: wrap;
+        }
+        &--col {
+            flex-direction: column;
+            &\@lg {
+                @media screen and (min-width: $width-lg) {
+                    flex-direction: column;
+                }
+            }
+        }
+        &--row {
+            flex-direction: row;
+            &\@lg {
+                @media screen and (min-width: $width-lg) {
+                    flex-direction: row;
+                }
+            }
+        }
+        &--center {
+            justify-content: center;
+        }
+    }
+}

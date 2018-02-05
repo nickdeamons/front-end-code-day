@@ -1,0 +1,73 @@
+.btn {
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.25s all;
+    display: inline-block;
+    &--primary {
+      
+        padding: 1em 1.5em;
+        background-color: $blue;
+        color: white;
+        font-weight: bold;
+        &:hover {
+            background-color: $gray-darkest;
+            
+        }
+    }
+    &--hero {
+        font-size: 16px;
+        min-width: 200px;
+        @media screen and (min-width: $width-md) {
+            font-size:20px;
+        }
+    }
+    &--mobile {
+        display: block;
+        position: relative;
+        width: 100%;
+        height: 30px;
+        background: #222;
+        border: 0;
+        border-radius: 0;
+        z-index: 1;
+        color:white;
+        font-size:20px;
+        font-weight: bold;
+        text-indent: -60px;
+        span {
+            position: absolute;
+            width: 25px;
+            height: 2px;
+            background-color: white;
+            top:3px;
+            left: calc(50% + 20px);
+            transition: all 0.5s;      
+            &:first-child {
+                transform: rotate(-135deg);
+                top:14px;
+            }
+            &:last-child {
+                top:14px;
+                transform: rotate(135deg);
+                left:calc(50% + 37px);
+            }
+        }
+        .nav-open & {
+            span {
+                top:15px;
+                left: calc(50% + 30px);
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        @media screen and (min-width:$width-lg){
+            display:none;
+        }
+    }
+}

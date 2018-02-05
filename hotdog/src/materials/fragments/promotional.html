@@ -1,0 +1,8 @@
+{{setVariable 'content' 'Here is some example content' }}
+{{setVariable 'title' 'Title' }}
+<div class="promotional bgcolor--white {{#if classes}}{{classes}}{{else}}u-padding--all {{/if}}">
+    <div class="promotional__content layout-flex layout-flex--col layout-flex--center">
+    <h3 class="h h-md h--promotional u-margin--bottom"><span>{{title}}</span></h3>
+    <p>{{content}}</p>
+    </div>
+</div>
