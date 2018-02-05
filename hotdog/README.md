@@ -1,3 +1,3 @@
 # Hot Dog! It's A Website.
 
-__Task:__ Turn this basic mockup into a web page. This is your shot to show us what you've got while making a site loosely based on Columbus' best hot dogs. 
+__Completion:__ This project is my attempt at this. 2/4/2018. This uses Fabricator as a starting point. It is fully responsive. jQuery added to save time.
